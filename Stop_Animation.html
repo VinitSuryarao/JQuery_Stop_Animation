@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title> JQuery Test  </title>
+   <style>
+      #bdy{
+         background-color: palegreen;
+         position: relative;
+         border: 1px solid black;
+      }
+   </style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type = "text/javascript">
+
+		    // ready func call when document is ready to render
+         $(document).ready(function() 
+         {     
+               // Animate
+               $('#btnAnimate').click(function(){
+                  $('#bdy').animate({left: '200px'}, 5000);
+                  $('#bdy').animate({width: 'toggle'}, 5000);
+               });
+               
+               // Stop Animate
+               $('#btnStop').click(function(){
+                  $('#bdy').stop(); // stop only first animation
+               });
+
+                // Stop All Animate
+                $('#btnStopAll').click(function(){
+                  $('#bdy').stop(true); // stop all animation
+               });
+         });
+     </script>
+<head>
+   <body>
+   <div id="bdy">
+      <h1> JQuery Information</h1>
+   </div>
+   <button id="btnAnimate"> Animate </button> 
+   <button id="btnStop"> Stop  </button> 
+   <button id="btnStopAll"> Stop All </button> 
+</body>
+</html>
